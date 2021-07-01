@@ -5,12 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { ButtonComponent } from './Components/button/button.component';
 // When creating a new component , it has to be imported here
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    FirstComponent,
+    HeaderComponent,
+    ButtonComponent
     // Then it is added here
     // if we generate a component with cli , the modification are done
     // automatically

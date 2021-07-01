@@ -1,0 +1,7 @@
+header {
+  /* style for buttons */
+  display : flex ; /* so it can go to the side */
+  justify-content : space-between;
+  align-items : center ;
+  margin-bottom : 20px ;
+}
