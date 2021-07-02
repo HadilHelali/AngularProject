@@ -1,6 +1,8 @@
 <!-- Iterate in the tasks -->
 <!-- We're going to use the task-item component to display each task -->
 
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+
 <app-task-item *ngFor="let task of tasks"
                [Onetask]="task"
                 (onDeleteTask) = "deleteTask(task)"

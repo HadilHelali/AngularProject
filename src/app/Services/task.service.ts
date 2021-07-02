@@ -56,5 +56,12 @@ export class TaskService {
     // it is a post request :
     return this.http.put<Task>(url,task,httpOptions);
   }
+
+  // function to add a task :
+  addTask(task:Task) : Observable<Task> {
+    // it is a post request :
+    return this.http.post<Task>(this.apiUrl,task,httpOptions);
+  }
+
 }
 

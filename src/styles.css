@@ -43,6 +43,7 @@ body {
 .btn-block {
   display: block;
   width: 100%;
+  background-color: #79A0AE ;
 }
 
 .form-control {
