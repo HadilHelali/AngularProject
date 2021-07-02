@@ -2,6 +2,9 @@
 <!-- We're going to use the task-item component to display each task -->
 
 <app-task-item *ngFor="let task of tasks"
-               [Onetask]="task"></app-task-item>
+               [Onetask]="task"
+                (onDeleteTask) = "deleteTask(task)"
+                 (onToggleReminder) = "ToggleReminder(task)"></app-task-item>
 <!-- [task]="task" : the first task is a property and the second one is a value -->
 <!-- the task here is going to be an input to the task-item component -->
+<!-- onDeleteTask is the event emitter of the task-item component -->

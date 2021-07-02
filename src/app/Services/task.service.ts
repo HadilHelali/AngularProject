@@ -1,3 +1,7 @@
+// ************************************************ //
+// **************** Imports *********************** //
+// ************************************************ //
+
 import {Injectable} from '@angular/core';
 import {Task} from '../Task'
 // import {TASKS} from '../mock-tasks'
@@ -5,6 +9,17 @@ import {Task} from '../Task'
 import {Observable, of} from 'rxjs'
 // include the HTTPClient after downloading the json server (our backend) :
 import {HttpClient , HttpHeaders } from '@angular/common/http' ;
+
+/////// for the post request :
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type' : 'application/json'
+  })
+}
+// ************************************************ //
+// ************************************************ //
+
+
 @Injectable({
   // declares that this service should be created
   // by the root application injector.
@@ -25,4 +40,21 @@ export class TaskService {
     return this.http.get<Task[]>(this.apiUrl)
     // <Task[]> to specify the type because this will return an observable
   }
+
+  // function to delete the task :
+  deleteTask(task:Task) : Observable<Task> {
+    // so it can be interpreted we use `` and we add the id to delete the specified task :
+    const url = `${this.apiUrl}/${task.id}` ;
+    // returns an observable after deleting the task
+    return this.http.delete<Task>(url);
+  }
+
+  // function to update a task :
+  updateTaskReminder(task:Task) : Observable<Task> {
+    // needs the id specifier
+    const url = `${this.apiUrl}/${task.id}` ;
+    // it is a post request :
+    return this.http.put<Task>(url,task,httpOptions);
+  }
 }
+

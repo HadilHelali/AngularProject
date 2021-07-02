@@ -20,6 +20,7 @@ import { HeaderComponent } from './Components/header/header.component';
 import { ButtonComponent } from './Components/button/button.component';
 import { TasksComponent } from './Components/tasks/tasks.component';
 import { TaskItemComponent } from './Components/task-item/task-item.component';
+import { AddTaskComponent } from './Components/add-task/add-task.component';
 // When creating a new component , it has to be imported here
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TaskItemComponent } from './Components/task-item/task-item.component';
     HeaderComponent,
     ButtonComponent,
     TasksComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    AddTaskComponent
     // Then it is added here
     // if we generate a component with cli , the modification are done
     // automatically

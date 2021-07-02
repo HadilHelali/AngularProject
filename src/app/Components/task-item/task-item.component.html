@@ -1,4 +1,13 @@
-<div class="task">
-  <h3>{{Onetask.text}}<fa-icon [ngStyle]="{'color':'#67B7BD'}" [icon]="faTimes"></fa-icon></h3>
+<!-- Onetask.reminder is a boolean and the boolean here means the div have
+the class remider or not (check the css it's really cool :DD ) -->
+<!-- double click on the div itself to set the remider -->
+<div [ngClass] = "{reminder: Onetask.reminder}"
+     (dblclick) = "onToggle(Onetask)"
+     class="task">
+  <!-- On click w're going to delete the task ! -->
+  <h3>{{Onetask.text}}<fa-icon
+    (click)="onDelete(Onetask)"
+    [ngStyle]="{'color':'#67B7BD'}"
+    [icon]="faTimes"></fa-icon></h3>
   <p>{{Onetask.day}}</p>
 </div>
