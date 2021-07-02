@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Task} from '../../Task'
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-task-item',
   templateUrl: './task-item.component.html',
@@ -10,6 +12,7 @@ export class TaskItemComponent implements OnInit {
   // else you'll get a compiling error
   // because you have the lastest version of the TypeScript compiler you have
   // to initialize the property in the constructor !!!
+  faTimes = faTimes ; // faTimes is a value and not a type
   constructor() {
     // initizing the property :
     this.Onetask = {

@@ -1,8 +1,19 @@
+// ************************************* //
+// ************ Modules **************** //
+// ************************************* //
 import { NgModule } from '@angular/core';
 // the NgModule is imported from the core
 import { BrowserModule } from '@angular/platform-browser';
-
+// importing the fontawesome module
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
+// import the http module here (for the http client )
+import {HttpClientModule} from '@angular/common/http'
+
+// **************************************** //
+// ************ Components **************** //
+// **************************************** //
+
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -25,7 +36,11 @@ import { TaskItemComponent } from './Components/task-item/task-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // import it here as well : font awesome
+    FontAwesomeModule,
+    // include the http client module here :
+    HttpClientModule
   ],
   providers: [], // Any global services
   bootstrap: [AppComponent]
